@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTide 2025</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #FFDAB9;
+            color: #444;
+            scroll-behavior: smooth;
+        }
+
+        /* HEADER SECTION WITH BACKGROUND IMAGE */
+        header {
+            color: white;
+            padding: 120px 20px; /* Increased padding for better look */
+            text-align: center;
+            position: relative;
+            background-image: url('shiny.jpg'); /* Your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Overlay for better readability */
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+            z-index: 0;
+        }
+
+        header h1, header p {
+            position: relative; /* Bring text above overlay */
+            z-index: 1;
+            margin: 0;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background-color: #007bff;
+            text-align: center;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff6347;
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 900px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        section:hover {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+        section h2 {
+            color: #007bff;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f1f1f1;
+            font-weight: 600;
+            color: #333;
+        }
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 12px 0;
+            font-size: 1.2rem;
+        }
+        ul li strong {
+            color: #007bff;
+        }
+
+        form {
+            max-width: 650px;
+            margin: 25px auto;
+        }
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        form input,
+        form textarea,
+        form button {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 18px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        form input:focus,
+        form textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        form button {
+            background-color: #007bff;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        form button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        form button:active {
+            background-color: #004085;
+            transform: scale(0.98);
+        }
+
+        img.banner {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        #expoIntro {
+            text-align: center;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            nav a {
+                display: block;
+                margin: 8px 0;
+            }
+        }
+/* TechTide 2025 Section */
+#expoIntro {
+    position: relative;
+    padding: 80px 20px;
+    text-align: center;
+    background-image: url('conference.jpg'); /* Section background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+}
+
+/* Overlay for readability */
+#expoIntro::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.45); /* Semi-transparent overlay */
+    z-index: 0;
+}
+
+/* Keep content above overlay */
+#expoIntro h2, 
+#expoIntro p, 
+#expoIntro video, 
+#expoIntro img {
+    position: relative;
+    z-index: 1;
+}
+
+/* Heading Style - Stylish and bold */
+#expoIntro h2 {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean modern font */
+    font-weight:800;      /* Extra bold */
+    font-size: 3rem;       /* Large size for emphasis */
+    margin-bottom: 20px;
+    letter-spacing: 1px;   /* Slight spacing for style */
+    text-transform: uppercase; /* All caps for style */
+}
+
+/* Paragraph Style - Elegant and readable */
+#expoIntro p {
+    color: white;
+    font-family: 'Georgia', 'Times New Roman', serif; /* Elegant serif font */
+    font-weight: 600;      /* Bold but less than heading */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 20px auto;
+    max-width: 800px;
+    letter-spacing: 0.5px;
+}
+#about h2 {
+    color: black; /* Bright, futuristic blue */
+    font-family: 'Poppins', 'Segoe UI', sans-serif; /* Modern, clean font */
+    font-weight: 900;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#about p {
+    font-family: 'Lora', 'Georgia', serif; /* Elegant yet readable font */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #222; /* Slightly darker for contrast */
+    margin-bottom: 15px;
+}
+
+#about p strong {
+    color: #00bfff; /* Highlight key phrases */
+    font-weight: 800;
+}
+/* ABOUT SECTION WITH BACKGROUND IMAGE */
+#about {
+    position: relative;
+    padding: 80px 20px;
+    text-align: center;
+    background-image: url('innovation.jpeg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+}
+
+/* Overlay for better readability */
+#about::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.45); /* Semi-transparent dark overlay */
+    z-index: 0;
+}
+
+/* Keep content above overlay */
+#about h2,
+#about p,
+#about img {
+    position: relative;
+    z-index: 1;
+}
+
+/* Heading Style */
+#about h2 {
+    color: white;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Paragraph Style */
+#about p {
+    color: white;
+    font-family: 'Lora', 'Georgia', serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 15px auto;
+    max-width: 800px;
+    letter-spacing: 0.5px;
+}
+
+#about p strong {
+    color: #00bfff; /* Highlight key phrases */
+    font-weight: 800;
+}
+
+    </style>
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <header>
+        <h1>Welcome to TechTide 2025</h1>
+        <p>Ride the Wave of Innovation</p>
+        <!-- Optional Header Banner Image -->
+        <!-- <img src="shiny.jpg" alt="TechTide 2025 Banner" class="banner"> -->
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#expoIntro">Home</a> |
+        <a href="#about">About</a> |
+        <a href="#schedule">Schedule</a> |
+        <a href="#speakers">Speakers</a> |
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- INTRO SECTION -->
+    <section id="expoIntro">
+        <h2>TechTide 2025</h2>
+         <p><strong>"Welcome to TechTide 2025 – The Pinnacle of Innovation and Technology!"</strong>
+
+       Step into a realm where ideas transform into reality and innovation drives the future. TechTide 2025 brings together visionaries, researchers, and students to showcase breakthrough projects, interactive demonstrations, and cutting-edge technologies.
+
+Join us for an immersive experience of knowledge, creativity, and inspiration, and be part of a community that is shaping tomorrow, today.
+
+Ride the wave of innovation – discover, learn, and ignite your passion for technology!</p>
+
+        <video width="100%" autoplay muted loop playsinline>
+            <source src="welcome_to_TechTide.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2>About TechTide 2025</h2>
+       
+        <p>"TechTide 2025 – Surf the Wave of Innovation!"
+
+Step into TechTide 2025, where vision meets technology and ideas transform into reality. This is not just an event—it’s a platform for creators, thinkers, and innovators to showcase the future today.
+
+Explore cutting-edge robotics, AI-driven solutions, immersive tech demos, and sustainable innovations. Engage with thought leaders, tech pioneers, and creative minds shaping the world of tomorrow. Every corner sparks curiosity, collaboration, and inspiration, making TechTide 2025 an experience you won’t forget.
+
+Join us to connect, create, and celebrate the possibilities of science and technology, and be part of a movement that’s redefining innovation..</p>
+    </section>
+
+    <!-- SCHEDULE SECTION -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Session</th>
+                    <th>Speaker</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9:00 AM</td>
+                    <td>Opening Keynote</td>
+                    <td>Dr. Deepika Sandeep</td>
+                </tr>
+                <tr>
+                    <td>9:10 AM</td>
+                    <td>Full Stack Development</td>
+                    <td>Dr. Naresh Gupta</td>
+                </tr>
+                <tr>
+                    <td>10:30 AM</td>
+                    <td>Understanding AI and Machine Learning</td>
+                    <td>Mr. John Britto</td>
+                </tr>
+                <tr>
+                    <td>12.00 PM</td>
+                    <td>Lunch Break</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td> 1.00 PM</td>
+                    <td>Exploring the Future of Cloud Computing</td>
+                    <td>Ms. Mehta</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- SPEAKERS SECTION -->
+    <section id="speakers">
+        <h2>Meet the Speakers</h2>
+        <ul>
+            <li> <strong>Dr. Deepika Sandeep:</strong> AI Expert and Researcher</li>
+            <li> <strong>Mr. John Britto:</strong> Senior Data Scientist at TechWave</li>
+            <li> <strong>Ms. Mehta:</strong> Cloud Computing Specialist at CloudTech</li>
+            <li> <strong>Dr. Naresh Gupta:</strong> Full Stack Developer and Open-Source Contributor</li>
+        </ul>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- SCRIPT SECTION -->
+    <script>
+        // Smooth scrolling for nav links
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Form validation
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', function(event) {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                alert('Please fill in all fields!');
+                event.preventDefault();
+                return;
+            }
+
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                event.preventDefault();
+            } else {
+                alert('Thank you for your message! We will get back to you soon.');
+            }
+        });
+    </script>
+</body>
+</html>
